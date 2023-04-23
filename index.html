@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Média ponderada</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <p class="titulo">Média ponderada</p>
+            <div class="inputDiv">
+                <p id="nameInput">AV 1</p>
+                <input type="number" name="av" id="av1" placeholder="Digite uma nota de 0 à 10">
+            </div>
+            <div class="inputDiv">
+                <p id="nameInput">AV 2</p>
+                <input type="number" name="av" id="av2" placeholder="Digite uma nota de 0 à 10">
+            </div>
+            <div class="inputDiv">
+                <p id="nameInput">AV 3</p>
+                <input type="number" name="av" id="av3" placeholder="Digite uma nota de 0 à 10">
+            </div>
+            <div class="inputDiv">
+                <p id="nameInput">AVT</p>
+                <input type="number" name="av" id="avt" placeholder="Digite uma nota de 0 à 10">
+            </div>
+            <button id="convert" onclick="mediaPonderada()">Calcular média ponderada</button>
+        </div>
+
+        <div class="result" id="contResul">
+            <p id="notaFinal"> <strong>Sua nota final será:</strong>  
+                <span id="result">0.0</span>
+            </p>
+        </div>
+
+        
+    </main>
+    <footer>
+        <a href="https://github.com/TonyRodIv/">
+            <p>@TonyRodIv on GitHub ©</p>
+        </a>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>
