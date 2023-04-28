@@ -17,7 +17,7 @@ function mediaPonderada() {
     let somaPesos = peso1 + peso2 + peso3 + peso4;
     let media = (av1 * peso1 + av2 * peso2 + av3 * peso3 + avt * peso4) / somaPesos;
     console.log(media)
-    result.innerHTML = media
+    result.innerHTML = media.toFixed(2)
     if(media<6){
         notaFinal.style.color = '#630101'
     }else{
