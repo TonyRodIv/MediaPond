@@ -23,7 +23,7 @@ function mediaPonderada() {
     result.innerHTML = media.toFixed(2)
     for (let i = 0; i < elipses.length; i++) {
         if (media < 6) {
-            elipses[i].style.backgroundColor = '#630101'
+            elipses[i].style.backgroundColor = '#AB2929'
         } else {
             elipses[i].style.backgroundColor = '#00747a'
         }

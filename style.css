@@ -20,16 +20,19 @@ main {
     align-items: center;
     justify-content: center;
 }
-header{
+
+header {
     height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Roboto Flex';
 }
-header p{
+
+header p {
     text-align: center;
 }
+
 input {
     padding: 11.2px;
     width: 100%;
@@ -55,7 +58,8 @@ input {
     gap: 40px;
     padding: 20px;
 }
-.inputField{
+
+.inputField {
     width: 100%;
     max-width: 288px;
     display: flex;
@@ -63,7 +67,8 @@ input {
     align-items: center;
     gap: 20px;
 }
-.inputDiv{
+
+.inputDiv {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -72,6 +77,13 @@ input {
 
 p {
     display: flex;
+}
+footer{
+    display: flex;
+    gap: 15px;
+}
+a img{
+    width: 25px;
 }
 
 button {
@@ -117,8 +129,24 @@ button {
     width: 144px;
     height: 144px;
     border-radius: 100px;
-    background-color: #00747a;
+    background-color: #8d8d8d;
     filter: blur(100px);
+}
+.aparecer{
+    animation-name: aparecer;
+    animation-duration: 3s;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        /* Começa com opacidade zero */
+    }
+
+    to {
+        opacity: 1;
+        /* Termina com opacidade um */
+    }
 }
 
 .e1 {
