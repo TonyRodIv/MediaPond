@@ -99,6 +99,7 @@ button {
 }
 #convert{
     background: #303030;
+    transition: background-color 3s;
     animation: aparecer 3s;
 }
 
