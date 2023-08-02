@@ -134,10 +134,8 @@ button {
     border-radius: 100px;
     background-color: #8d8d8d;
     filter: blur(100px);
-}
-.aparecer{
-    animation-name: aparecer;
-    animation-duration: 3s;
+    transition: background-color 3s;
+    animation: aparecer 3s;
 }
 
 @keyframes aparecer {
