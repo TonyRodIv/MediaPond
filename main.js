@@ -1,5 +1,6 @@
 
 let result = document.getElementById('result')
+let convert = document.getElementById('convert')
 let title = document.getElementById('titulo')
 let contResul = document.getElementById('contResul')
 let elipses = document.getElementsByClassName('elipse');
@@ -24,8 +25,10 @@ function mediaPonderada() {
     for (let i = 0; i < elipses.length; i++) {
         if (media < 6) {
             elipses[i].style.backgroundColor = '#AB2929'
+            convert.style.backgroundColor = '#934747'
         } else {
             elipses[i].style.backgroundColor = '#00747a'
+            convert.style.backgroundColor = '#479385'
         }
     }
     return media;
