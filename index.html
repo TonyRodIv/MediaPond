@@ -9,41 +9,46 @@
 </head>
 <body>
     <main>
-        <div class="container">
-            <header>
-                <p class="titulo">Média ponderada</p>
-            </header>
-            <div class="inputDiv">
-                <p id="nameInput">AV 1</p>
-                <input type="number" name="av" id="av1" placeholder="Digite uma nota de 0 à 10">
-            </div>
-            <div class="inputDiv">
-                <p id="nameInput">AV 2</p>
-                <input type="number" name="av" id="av2" placeholder="Digite uma nota de 0 à 10">
-            </div>
-            <div class="inputDiv">
-                <p id="nameInput">AV 3</p>
-                <input type="number" name="av" id="av3" placeholder="Digite uma nota de 0 à 10">
-            </div>
-            <div class="inputDiv">
-                <p id="nameInput">AVT</p>
-                <input type="number" name="av" id="avt" placeholder="Digite uma nota de 0 à 10">
-            </div>
-            <button id="convert" onclick="mediaPonderada()">Calcular média ponderada</button>
-        </div>
+        <section class="backfilter">
+            <figure class="elipse e1" id="elipse"></figure>
+            <figure class="elipse e2" id="elipse"></figure>
+            <figure class="elipse e3" id="elipse"></figure>
+            <figure class="elipse e4" id="elipse"></figure>
+        </section>
 
-        <div class="result" id="contResul">
+        <section class="container">
+            <header>
+                <p class="titulo" id="titulo">Calculadora <br> de Notas</p>
+                <p class="titulo" id="contResul">Sua nota final será <span id="result"> 0.0</span></p>
+            </header>
+            <section class="inputField">
+                <figure class="inputDiv">
+                    <p id="nameInput">Nota da AV 1</p>
+                    <input type="number" name="av" id="av1" placeholder="Digite uma nota de 0 à 10">
+                </figure>
+                <figure class="inputDiv">
+                    <p id="nameInput">Nota da AV 2</p>
+                    <input type="number" name="av" id="av2" placeholder="Digite uma nota de 0 à 10">
+                </figure>
+                <figure class="inputDiv">
+                    <p id="nameInput">Nota da AV 3</p>
+                    <input type="number" name="av" id="av3" placeholder="Digite uma nota de 0 à 10">
+                </figure>
+                <figure class="inputDiv">
+                    <p id="nameInput">Nota da AVT</p>
+                    <input type="number" name="av" id="avt" placeholder="Digite uma nota de 0 à 10">
+                </figure>
+            </section>
+            <button id="convert" onclick="mediaPonderada()">Calcular média ponderada</button>
+        </section>
+
+        <!-- <section class="result" id="contResul">
             <p id="notaFinal"> <strong>Sua nota final será:</strong>  
                 <span id="result">0.0</span>
             </p>
-        </div>
+        </section> -->
 
         
-        <footer>
-            <a href="https://github.com/TonyRodIv/">
-                <p>@TonyRodIv on GitHub ©</p>
-            </a>
-        </footer>
     </main>
     <script src="./main.js"></script>
 </body>

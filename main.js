@@ -1,11 +1,14 @@
 
 let result = document.getElementById('result')
+let title = document.getElementById('titulo')
 let contResul = document.getElementById('contResul')
-let notaFinal = document.getElementById('notaFinal')
+let elipses = document.getElementsByClassName('elipse');
 contResul.style.display = 'none'
+title.style.display = 'flex'
 
 function mediaPonderada() {
     contResul.style.display = 'flex'
+    title.style.display = 'none'
     let av1 = document.getElementById('av1').value
     let av2 = document.getElementById('av2').value
     let av3 = document.getElementById('av3').value
@@ -18,10 +21,12 @@ function mediaPonderada() {
     let media = (av1 * peso1 + av2 * peso2 + av3 * peso3 + avt * peso4) / somaPesos;
     console.log(media)
     result.innerHTML = media.toFixed(2)
-    if(media<6){
-        notaFinal.style.color = '#630101'
-    }else{
-        notaFinal.style.color = '#015658'
+    for (let i = 0; i < elipses.length; i++) {
+        if (media < 6) {
+            elipses[i].style.backgroundColor = '#630101'
+        } else {
+            elipses[i].style.backgroundColor = '#00747a'
+        }
     }
     return media;
 }
