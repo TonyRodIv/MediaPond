@@ -98,8 +98,8 @@ button {
 }
 #convert{
     background: #303030;
-    transition: background-color 3s;
-    animation: aparecer 1s;
+    transition: background-color 1s;
+    animation: aparecer 0.5s;
 }
 
 #nameInput {
@@ -134,8 +134,8 @@ button {
     border-radius: 100px;
     background-color: #8d8d8d;
     filter: blur(100px);
-    transition: background-color 3s;
-    animation: aparecer 3s;
+    transition: background-color 1s;
+    animation: aparecer 0.5s;
 }
 
 @keyframes aparecer {
