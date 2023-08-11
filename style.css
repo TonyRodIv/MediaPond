@@ -56,6 +56,8 @@ input {
     align-items: center;
     gap: 40px;
     padding: 20px;
+    position: absolute;
+    z-index: 0;
 }
 
 .inputField {
