@@ -16,7 +16,7 @@ function mediaPonderada() {
     let peso1 = 2.5;
     let peso2 = 2.5;
     let peso4 = 5;
-    let somaPesos = peso1 + peso2 + peso3 + peso4;
+    let somaPesos = peso1 + peso2 + peso4;
     let media = (av1 * peso1 + av2 * peso2 + avt * peso4) / somaPesos;
     console.log(media)
     result.innerHTML = media.toFixed(2)
