@@ -9,34 +9,40 @@
 </head>
 <body>
     <main>
-        <section class="backfilter">
-            <figure class="elipse e1 aparecer" id="elipse"></figure>
-            <figure class="elipse e2 aparecer" id="elipse"></figure>
-            <figure class="elipse e3 aparecer" id="elipse"></figure>
-            <figure class="elipse e4 aparecer" id="elipse"></figure>
-        </section>
-
         <section class="container">
             <header>
                 <p class="titulo" id="titulo">Calculadora <br> de Notas</p>
-                <p class="titulo" id="contResul">Sua nota final será <span id="result"> 0.0</span></p>
+            <div id="resultCard">
+                <div class="cardContentTop">
+                    <p>Sua Nota do trimestre será</p>
+                </div>
+                <div class="cardContentBot">
+                    <p id="result">0.0</p>
+                    <div class="progressCont">
+                        <div class="progressBar" id="progressBar">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
             </header>
-            <section class="inputField">
-                <figure class="inputDiv">
-                    <p id="nameInput">Nota da AV 1</p>
-                    <input type="number" name="av" id="av1" placeholder="Digite uma nota de 0 à 10">
-                </figure>
-                <figure class="inputDiv">
-                    <p id="nameInput">Nota da AV 2</p>
-                    <input type="number" name="av" id="av2" placeholder="Digite uma nota de 0 à 10">
-                </figure>
-              
-                <figure class="inputDiv">
-                    <p id="nameInput">Nota da AVT</p>
-                    <input type="number" name="av" id="avt" placeholder="Digite uma nota de 0 à 10">
-                </figure>
-            </section>
-            <button id="convert" onclick="mediaPonderada()">Calcular minha nota</button>
+            <div class="notes">
+                <section class="inputField">
+                    <figure class="inputDiv">
+                        <p id="nameInput" class="nameInput">AV 1</p>
+                        <input type="number" name="av" id="av1" placeholder="AV1">
+                    </figure>
+                    <figure class="inputDiv">
+                        <p id="nameInput" class="nameInput">AV 2</p>
+                        <input type="number" name="av" id="av2" placeholder="AV2">
+                    </figure>
+                  
+                    <figure class="inputDiv">
+                        <p id="nameInput" class="nameInput">AVT</p>
+                        <input type="number" name="av" id="avt" placeholder="AVT">
+                    </figure>
+                </section>
+                <button id="calculate" onclick="mediaPonderada()">Calcular minha nota</button>
             <footer>
                 <a href="https://github.com/TonyRodIv" target="_blank">
                     <img src="./github.svg" alt="">
@@ -45,6 +51,7 @@
                     <img src="./instagram.svg" alt="">
                 </a>
             </footer>
+            </div>
         </section>
 
         <!-- <section class="result" id="contResul">

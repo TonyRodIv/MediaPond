@@ -1,15 +1,13 @@
 
 let result = document.getElementById('result')
-let convert = document.getElementById('convert')
+let calculate = document.getElementById('calculate')
 let title = document.getElementById('titulo')
-let contResul = document.getElementById('contResul')
-let elipses = document.getElementsByClassName('elipse');
-contResul.style.display = 'none'
-title.style.display = 'flex'
+let progressBar = document.getElementById('progressBar');
+let resultCard = document.getElementById('resultCard');
+resultCard.style.display = 'none'
+console.log('algo')
 
 function mediaPonderada() {
-    contResul.style.display = 'flex'
-    title.style.display = 'none'
     let av1 = document.getElementById('av1').value
     let av2 = document.getElementById('av2').value
     let avt = document.getElementById('avt').value
@@ -20,14 +18,31 @@ function mediaPonderada() {
     let media = (av1 * peso1 + av2 * peso2 + avt * peso4) / somaPesos;
     console.log(media)
     result.innerHTML = media.toFixed(2)
-    for (let i = 0; i < elipses.length; i++) {
-        if (media < 6) {
-            elipses[i].style.backgroundColor = '#AB2929'
-            convert.style.backgroundColor = '#934747'
-        } else {
-            elipses[i].style.backgroundColor = '#00747a'
-            convert.style.backgroundColor = '#479385'
-        }
+    let mediaRound = Math.round(media);
+    console.log(`${mediaRound}0%`)
+    resultCard.style.display = 'flex'
+    if (media < 3) {
+        progressBar.style.background = 'linear-gradient(90deg, rgba(195,81,81,1) 48%, rgba(202,140,98,1) 100%)'
+        progressBar.style.width = `${mediaRound}0%`
+    } else if (media < 6) {
+        progressBar.style.background = 'linear-gradient(90deg, rgba(195,81,81,1) 29%, rgba(202,154,98,1) 69%)'
+        progressBar.style.width = `${mediaRound}0%`
+
+    } else if (media = 6) {
+        progressBar.style.background = 'linear-gradient(90deg, rgba(195,81,81,1) 10%, rgba(202,179,98,1) 50%, rgba(137,181,170,1) 100%)'
+        progressBar.style.width = `${mediaRound}0%`
+
+    }else if (media < 8) {
+        progressBar.style.background = 'linear-gradient(90deg, rgba(195,81,81,1) 14%, rgba(202,179,98,1) 80%, rgba(137,181,170,1) 100%)'
+        progressBar.style.width = `${mediaRound}0%`
+
+    } else if (media < 9.9) {
+        progressBar.style.background = 'linear-gradient(90deg, rgba(195,81,81,1) 14%, rgba(202,179,98,1) 55%, rgba(111,182,212,1) 100%)'
+        progressBar.style.width = `${mediaRound}0%`
+
+    } else {
+        progressBar.style.background = 'linear-gradient(90deg, rgba(195,81,81,1) 14%, rgba(202,179,98,1) 40%, rgba(111,182,212,1) 100%)'
+        progressBar.style.width = `${mediaRound}0%`
     }
     return media;
 }

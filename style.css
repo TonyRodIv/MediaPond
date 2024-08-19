@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&family=Roboto+Slab:wght@300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
     margin: 0;
@@ -7,14 +7,16 @@
 }
 
 body {
-    background-color: #1E1E1E;
+    background: rgb(13, 17, 18);
+    background: linear-gradient(0deg, rgba(13, 17, 18, 1) 65%, rgba(62, 62, 62, 1) 100%);
     color: #fff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Montserrat';
 }
 
 main {
     height: 100vh;
     width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,11 +24,14 @@ main {
 }
 
 header {
-    height: 20%;
+    height: 40%;
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto Flex';
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-top: 5%;
+    gap: 50px;
 }
 
 header p {
@@ -34,81 +39,76 @@ header p {
 }
 
 input {
-    padding: 11.2px;
+    padding: 12px;
     width: 100%;
-    max-width: 288px;
-    border-radius: 10px;
+    max-width: 100px;
+    height: 50px;
+    border-radius: 12px;
     border: 1px solid #464444;
     background: rgba(56, 56, 56, 0.50);
     color: #fff;
-    backdrop-filter: blur(5px);
-}
-
-.container {
-    /* border: 1px solid darkcyan; */
-    background: rgba(40, 40, 40, 0.5);
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(5px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    padding: 20px;
-    position: absolute;
-    z-index: 0;
 }
 
 .inputField {
     width: 100%;
-    max-width: 288px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+#resultCard {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 8%;
 }
 
 .inputDiv {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 5px;
 }
 
 p {
     display: flex;
 }
-footer{
+
+footer {
     display: flex;
+    justify-content: center;
     gap: 15px;
 }
-a img{
+
+a img {
     width: 25px;
 }
 
 button {
-    margin: 1rem 0.5rem;
     padding: 0.8rem 2rem;
-    border: 0.6px solid #403f3f;
     border-radius: 18px;
-    backdrop-filter: blur(5px);
-    color: #fff;
+    background-color: #DEDEDE;
+    color: #1E1E1E;
     font-weight: bold;
     width: 100%;
-    max-width: 280px;
-    font-size: 0.9rem;
+    height: 3.6rem;
+    font-size: 1.1rem;
     cursor: pointer;
 }
-#convert{
-    background: #303030;
-    transition: background-color 1s;
-    animation: aparecer 0.5s;
-}
 
-#nameInput {
-    font-size: 14px;
-    font-weight: 400;
-    font-family: 'Roboto Flex';
+.nameInput {
+    color: #ffffffc7;
+    justify-content: center;
 }
 
 .result {
@@ -116,29 +116,68 @@ button {
 }
 
 .titulo {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
-.backfilter {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+.notes {
+    margin-bottom: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+#resultCard {
+    border-radius: 16px;
+    border: 1px solid #464444;
+    background: #353535;
+    color: #fff;
+    max-height: 140px;
+
     display: flex;
     justify-content: center;
-    z-index: 0;
+    align-items: left;
+    flex-direction: column;
+    gap: 8px;
+    padding: 22px;
 }
 
-.elipse {
-    width: 144px;
-    height: 144px;
+.cardContentTop {
+    width: 100%;
+    justify-content: start;
+}
+
+.cardContentTop p {
+    font-size: 18px;
+}
+
+.cardContentBot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+#result {
+    width: min-content;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.progressCont {
+    background-color: #565656;
+    width: 180px;
+    height: 25px;
     border-radius: 100px;
-    background-color: #8d8d8d;
-    filter: blur(100px);
-    transition: background-color 1s;
-    animation: aparecer 0.5s;
+}
+
+.progressBar {
+    /* width: 70%; */
+    height: 100%;
+    border-radius: 100px;
 }
 
 @keyframes aparecer {
@@ -151,28 +190,4 @@ button {
         opacity: 1;
         /* Termina com opacidade um */
     }
-}
-
-.e1 {
-    position: relative;
-    top: 3vh;
-    left: 5vw;
-}
-
-.e2 {
-    position: relative;
-    top: 20vh;
-    right: -40vw;
-}
-
-.e3 {
-    position: relative;
-    top: 50vh;
-    right: 40vw;
-}
-
-.e4 {
-    position: relative;
-    top: 70vh;
-    right: 10vw;
 }
