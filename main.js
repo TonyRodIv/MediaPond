@@ -5,9 +5,11 @@ let title = document.getElementById('titulo')
 let progressBar = document.getElementById('progressBar');
 let resultCard = document.getElementById('resultCard');
 resultCard.style.display = 'none'
+// resultCard.style.display = 'flex'
 console.log('algo')
 
 function mediaPonderada() {
+    progressBar.style.transition = 'all 0.5s ease'
     let av1 = document.getElementById('av1').value
     let av2 = document.getElementById('av2').value
     let avt = document.getElementById('avt').value
@@ -20,6 +22,7 @@ function mediaPonderada() {
     result.innerHTML = media.toFixed(2)
     let mediaRound = Math.round(media);
     console.log(`${mediaRound}0%`)
+
     resultCard.style.display = 'flex'
     if (media < 3) {
         progressBar.style.background = 'linear-gradient(90deg, rgba(195,81,81,1) 48%, rgba(202,140,98,1) 100%)'
