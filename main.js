@@ -21,9 +21,9 @@ function mediaPonderada() {
     console.log(media)
     result.innerHTML = media.toFixed(2)
     let mediaRound = Math.round(media);
-    console.log(`${mediaRound}0%`)
 
     resultCard.style.display = 'flex'
+    progressBar.style.width = `0%`
     if (media < 3) {
         progressBar.style.background = 'linear-gradient(90deg, rgba(195,81,81,1) 48%, rgba(202,140,98,1) 100%)'
         progressBar.style.width = `${mediaRound}0%`
@@ -31,19 +31,23 @@ function mediaPonderada() {
         progressBar.style.background = 'linear-gradient(90deg, rgba(195,81,81,1) 29%, rgba(202,154,98,1) 69%)'
         progressBar.style.width = `${mediaRound}0%`
 
-    } else if (media = 6) {
+    } else if (media < 7) {
         progressBar.style.background = 'linear-gradient(90deg, rgba(195,81,81,1) 10%, rgba(202,179,98,1) 50%, rgba(137,181,170,1) 100%)'
         progressBar.style.width = `${mediaRound}0%`
 
-    }else if (media < 8) {
+    } else if (media < 8) {
         progressBar.style.background = 'linear-gradient(90deg, rgba(195,81,81,1) 14%, rgba(202,179,98,1) 80%, rgba(137,181,170,1) 100%)'
         progressBar.style.width = `${mediaRound}0%`
 
-    } else if (media < 9.9) {
+    } else if (media < 10) {
         progressBar.style.background = 'linear-gradient(90deg, rgba(195,81,81,1) 14%, rgba(202,179,98,1) 55%, rgba(111,182,212,1) 100%)'
-        progressBar.style.width = `${mediaRound}0%`
+        if (media > 9.4) {
+            progressBar.style.width = `95%`
+        } else {
+            progressBar.style.width = `${mediaRound}0%`
+        }
 
-    } else {
+    } else if(media=10) {
         progressBar.style.background = 'linear-gradient(90deg, rgba(195,81,81,1) 14%, rgba(202,179,98,1) 40%, rgba(111,182,212,1) 100%)'
         progressBar.style.width = `${mediaRound}0%`
     }

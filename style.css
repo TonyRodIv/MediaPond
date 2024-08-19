@@ -130,6 +130,11 @@ button {
     flex-direction: column;
     gap: 26px;
 }
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
 
 #resultCard {
     border-radius: 16px;
